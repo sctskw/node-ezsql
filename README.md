@@ -10,9 +10,10 @@ Usage
 -----
 
 ### Write your queries
-__assuming ./sql/path/__
+*assuming path: ./sql/path/*
 
     //filename: ./sql/path/getUser.js
+
     SELECT
      *
     FROM test.users
@@ -30,10 +31,11 @@ __assuming ./sql/path/__
         console.log(results);
     });
 
-    //eg.
-    //  [{
-    //      id: 2,
-    //      name: 'Sam Adams',
-    //      email: 'sam.adams@boston.com',
-    //      date_added: Wed Nov 12 2014 00:35:03 GMT-0700 (MST)
-    //  }]
+    output:
+
+        [{
+            id: 2,
+            name: 'Sam Adams',
+            email: 'sam.adams@boston.com',
+            date_added: Wed Nov 12 2014 00:35:03 GMT-0700 (MST)
+        }]
