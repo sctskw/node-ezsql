@@ -24,8 +24,8 @@ Usage
 ### Write your queries
 *assuming path: ./sql/path/*
 
-    filename: ./sql/path/getUser.js
-
+    filename: ./sql/path/getUser.sql
+    ```
     SELECT
      *
     FROM test.users
