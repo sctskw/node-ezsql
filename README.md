@@ -24,11 +24,19 @@ Usage
 ### Write your queries
 *assuming path: ./sql/path/*
 
-    filename: ./sql/path/getUser.sql
-    ```
+    ### filename: ./sql/path/getUsers.sql
+
     SELECT
      *
     FROM test.users
+
+
+    ### filename: ./sql/path/getUser.sql
+
+    SELECT
+     *
+    FROM test.users
+    WHERE id = ?
 
 ### Create SQL
 
@@ -38,6 +46,8 @@ Usage
     });
 
 ### Call SQL
+
+    ### getUsers()
 
     var users = sql.getUsers().then(function(results){
         console.log(results);
@@ -51,6 +61,21 @@ Usage
             email: 'sam.adams@boston.com',
             date_added: Wed Nov 12 2014 00:35:03 GMT-0700 (MST)
         }]
+
+    ### getUser(2)
+
+    var user = sql.getUser(2).then(function(results){
+        console.log(results[0]);
+    });
+
+    output:
+
+        {
+            id: 2,
+            name: 'Sam Adams',
+            email: 'sam.adams@boston.com',
+            date_added: Wed Nov 12 2014 00:35:03 GMT-0700 (MST)
+        }
 
 Caveats
 -------
