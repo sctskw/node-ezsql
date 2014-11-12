@@ -1,12 +1,11 @@
 should = require 'should'
 fileLoader = require '../lib/fileLoader'
 
-sqlconnector = require('../lib/connector/sql')({
-  host     : 'localhost',
-  user     : 'mysql'
-})
-factory = require('../lib/factory')
-sql = factory('tests/sql', sqlconnector)
+config =
+  host: 'localhost'
+  user: 'mysql'
+
+sql = require('../lib')('tests/sql', config)
 
 describe 'FactorySpec', ->
   it 'should pass', ->
