@@ -1,3 +1,5 @@
+__*WARNING: This module is still in active development and is by no means ready for community consumption. Use at your own risk and be nice.*__
+
 node-ezsql
 ==========
 
