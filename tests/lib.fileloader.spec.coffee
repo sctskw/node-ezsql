@@ -2,8 +2,8 @@ should = require 'should'
 fileLoader = require '../lib/fileLoader'
 
 config =
-  host: 'localhost'
-  user: 'mysql'
+  host: 'localhst'
+  user: 'mysq'
 
 sql = require('../lib')('tests/sql', config)
 
