@@ -21,7 +21,7 @@ By using a directory structure, the filename, and the .sql file extension we aut
 Usage
 -----
 
-### Write your queries
+### Write SQL
 *assuming path: ./sql/path/*
 
     ### filename: ./sql/path/getUsers.sql
