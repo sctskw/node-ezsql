@@ -1,9 +1,19 @@
 node-ezsql
 ==========
 
-raw sql solution for node.js
+pure sql solution for node.js
 
-This solutiona allows you to write SQL in it's raw format using .sql files to organize your queries. Since you're writing them in pure sql you are able to utilize any syntax checkers you might have. It also allows you to write complicated queries that otherwise wouldn't be feasible in ORM's. Since the queries are in their raw format, they are also easily searchable in whatever repository they are in.
+Why?
+----
+
+ - ORM's can be overcomplicated
+ - JS/Node long strings are ugly in code
+ - Pure SQL is easier to read/search/modify
+ - Syntax checkers are .sql friendly
+
+How?
+----
+By using a directory structure, the filename, and the .sql file extension we automatically generate a factory of sql functions that can be called with ease. This allows you to write SQL as you would anywhere else, and forget about the rest.
 
 
 Usage
@@ -12,7 +22,7 @@ Usage
 ### Write your queries
 *assuming path: ./sql/path/*
 
-    //filename: ./sql/path/getUser.js
+    filename: ./sql/path/getUser.js
 
     SELECT
      *
@@ -39,3 +49,13 @@ Usage
             email: 'sam.adams@boston.com',
             date_added: Wed Nov 12 2014 00:35:03 GMT-0700 (MST)
         }]
+
+Caveats
+-------
+Due to limitations with async handling and the filesystem, this module is currently synchronous. In order to generate functions using filesystem data, the module waits for each file to be loaded into memory before it can make the generated function available at the module level.
+
+Future
+------
+- fully support async by using promises or non-blocking sync
+- utilize subdirectories to create namespaces
+    - eg. sql.users.fetchAll()
