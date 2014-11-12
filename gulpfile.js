@@ -42,6 +42,6 @@ gulp.task('test', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch('tests/**/*.coffee', ['test']);
+  gulp.watch(src.test.watch.src, src.test.watch.exec);
 });
 

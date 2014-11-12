@@ -27,5 +27,11 @@
   },
   "directories": {
     "test": "tests"
+  },
+  "dependencies": {
+    "glob": "~4.0.6",
+    "lodash": "~2.4.1",
+    "bluebird": "~2.3.11",
+    "mysql": "~2.5.3"
   }
 }
